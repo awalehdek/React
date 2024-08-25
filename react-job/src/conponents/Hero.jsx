@@ -1,16 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-const hero = () => {
+const Hero = ({ title, subtitle }) => {
   return (
-    <section className="bg-indigo-700 py-20 mb-4">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">Become a React Dev</h1>
-        <p className="my-4 text-xl text-white">Find the React job that fits your skills and needs</p>
+    <section className="bg-gradient-to-r from-indigo-600 to-blue-500 py-24 mb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <div className="text-center">
+          {/*<!-- Title with Circular Font and Increased Size -->*/}
+          <h1 className="text-5xl font-extrabold text-white sm:text-6xl md:text-7xl" style={{ fontFamily: "'Circular Std', sans-serif" }}>{title}</h1>
+          <p className="my-6 text-2xl text-white">{subtitle}</p>
+        </div>
       </div>
-    </div>
-  </section>
-  )
-}
+    </section>
+  );
+};
 
-export default hero
+export default Hero;
