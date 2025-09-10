@@ -10,11 +10,16 @@ export default function Homepage() {
             className='text-blue-400'>&rarr;</span> Translate
             <span className='text-blue-400'>&rarr;</span> View & Edit 
         </h3>
-        <button>
+        <button className='mt-10 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded flex items-center gap-2 w-40 justify-center mx-auto'>
           <p>Recording</p>
           <i class="fa-solid fa-microphone"></i>
-          
         </button>
+
+        <p>
+          <label className='font-bold  mt-10 text-purple-600'>Or uplod a transcript 
+            <input type="file" accept="audio/*" className='hidden' />
+          </label> .mp3 file.
+        </p>
     </main>
   )
 }
