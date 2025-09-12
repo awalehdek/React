@@ -6,7 +6,10 @@ import Homepage from './components/Homepage'
 import Header from './components/Header'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [file, setCount_file] = useState(null)
+  const [audioStream, setCount_audio] = useState(null)
+
+  const audioRecordAvailable= file || audioStream
 
   return (
     <div className='flex flex-col max-w-4xl mx-auto'>
