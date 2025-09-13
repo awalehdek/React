@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Homepage from './components/Homepage'
 import Header from './components/Header'
+import DisplayFile from './components/DisplayFile'
 
 function App() {
   const [file, setCount_file] = useState(null)
@@ -16,7 +17,9 @@ function App() {
         
         <section className='min-h-screen flex flex-col'>
           <Header/>
-          <Homepage/>
+          { audioRecordAvailable ? (
+            <DisplayFile/>
+          ):(<Homepage/>)}
         </section>
 
         <h1 className='text-indigo-400'>Transcript Viewer</h1> 
